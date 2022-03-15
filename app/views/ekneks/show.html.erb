@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+<%= render @eknek %>
+<%= link_to "View File", @eknek.file %> | 
+<%= link_to "Download", @eknek.file, download: '' %>
+<div>
+
+  <%= link_to "Edit this eknek", edit_eknek_path(@eknek) %> |
+  <%= link_to "Back to ekneks", ekneks_path %>
+
+  <%= button_to "Destroy this eknek", @eknek, method: :delete %>
+</div>
+
