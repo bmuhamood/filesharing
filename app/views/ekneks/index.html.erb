@@ -1,12 +1,13 @@
+<div class="col-md-10 mx-auto">
 <p style="color: green"><%= notice %></p>
-<%= link_to "New eknek", new_eknek_path %>
+<%= link_to "Create New File", new_eknek_path, :class => "btn btn-primary mb-3" %>
 <table class="table table-hover table-bordered table-sm">
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Action </th>
-      <th colspan="3"></th>
+      <th>URL</th>
+      <th colspan="3">Action</th>
     </tr>
   </thead>
 
@@ -15,13 +16,11 @@
       <tr>
         <td><%= eknek.title %></td>
         <td><%= eknek.description %></td>
-        <td><%= eknek.description %></td>
-        <td><%= eknek.description %></td>
-        <td><class="btn btn-secondary">copy link</td>
-        <td><%= link_to "Show", eknek %></td>
-        <td><%= link_to "Edit", edit_eknek_path(eknek) %></td>
-        <td><%= link_to "Destroy", eknek, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
+        <td><%= link_to "Copy", eknek, :class => "btn btn-primary" %></td>
+        <td><%= link_to "View", eknek, :class => "btn btn-primary" %></td>
+        <td><%= link_to "Edit", edit_eknek_path(eknek), :class => "btn btn-secondary" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>

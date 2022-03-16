@@ -1,12 +1,12 @@
+<div class="mx-auto col-md-8">
 <p style="color: green"><%= notice %></p>
 <%= render @eknek %>
-<%= link_to "View File", @eknek.file %> | 
-<%= link_to "Download", @eknek.file, download: '' %>
 <div>
 
-  <%= link_to "Edit this eknek", edit_eknek_path(@eknek) %> |
-  <%= link_to "Back to ekneks", ekneks_path %>
-
-  <%= button_to "Destroy this eknek", @eknek, method: :delete %>
+  <%= link_to "Edit Description", edit_eknek_path(@eknek), :class => "btn btn-secondary mb-3" %> |
+  <%= link_to "Back to Files", ekneks_path, :class => "btn btn-secondary"  %> |
+  <%= link_to "Download file", @eknek.file, download: '', :class => "btn btn-primary" %>
+  <%= button_to "Destroy this File", @eknek, method: :delete, :class => "btn btn-danger" %>
+</div>
 </div>
 

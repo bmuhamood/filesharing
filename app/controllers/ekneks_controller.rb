@@ -1,9 +1,9 @@
 class EkneksController < ApplicationController
   before_action :set_eknek, only: %i[ show edit update destroy ]
-
+  before_action :ensure_current_user
   # GET /ekneks or /ekneks.json
   def index
-    @ekneks = Eknek.all
+    @ekneks = current_user.ekneks
   end
 
   # GET /ekneks/1 or /ekneks/1.json
@@ -21,7 +21,7 @@ class EkneksController < ApplicationController
 
   # POST /ekneks or /ekneks.json
   def create
-    @eknek = Eknek.new(eknek_params)
+    @eknek = current_user.ekneks.new(eknek_params)
 
     respond_to do |format|
       if @eknek.save
@@ -60,7 +60,7 @@ class EkneksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_eknek
-      @eknek = Eknek.find(params[:id])
+      @eknek = current_user.ekneks.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

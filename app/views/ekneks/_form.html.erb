@@ -1,3 +1,4 @@
+<div class="col-md-8 mx-auto">
 <%= form_with(model: eknek) do |form| %>
   <% if eknek.errors.any? %>
     <div style="color: red">
@@ -11,17 +12,24 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="form-outline mb-4">
+    <%= form.text_field :title, class: "form-control" %>
+    <label class="form-label" for="Name">Title</label>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
+    <label class="form-label" for="description">Description</label>
   </div>
 
   <div>
-    <%= form.submit %>
+
+    <%= form.file_field :file, class:"form-control-file mb-3 mt-3" %>
+  </div>
+
+  <div>
+    <%= form.submit "Create File", class: "btn btn-primary"%>
   </div>
 <% end %>
+</div>
+
