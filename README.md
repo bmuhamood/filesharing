@@ -24,7 +24,7 @@ We need to design a system allowing verified users to upload sensitive data in t
 
 ## Features Implemented
 
-- Since my Mac PC crushed, i have Implemented features ``1-4`` on windows PC and feature ``5`` has not been implemented due to windows system imcompatibilities with some rails gems and APIs which required more time for troubleshootings and also which would have affected the deadline. 
+- Since my Mac PC crushed, i have Implemented features ``1-4`` on windows PC and feature ``5`` has not been implemented due to windows system imcompatibilities with some rails gems and APIs which required more time for troubleshootings and also which would have affected submission deadline. 
 
 ## Install
 
@@ -32,7 +32,7 @@ You can run these functions in you own local environment. In order to run, you n
 
 ## How to install Ruby On Rails
 
-- Follow Ruby on Rails Installation Guide Using this link `https://guides.rubyonrails.org/v5.0/getting_started.html`
+- Follow Ruby on Rails Installation Guide Using this link `https://github.com/rails/rails/tree/v7.0.2.3`
 - Once done, go to project directory and test if Rails is working fine on your Terminal by typing ``rails server``
 
 To get a local copy up and running follow these steps.
