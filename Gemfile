@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.1"
+ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
@@ -11,10 +11,17 @@ gem "sprockets-rails"
 
 gem "tzinfo-data"
 
+gem 'sqlite3'
+gem 'paperclip'
+# gem 'mimemagic'
+gem 'shared-mime-info'
+
+# gem 'bcrypt'
+gem 'bcrypt', '~> 3.1', '>= 3.1.17'
 gem 'shrine', '~> 3.4'
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -45,8 +52,11 @@ gem 'aws-sdk-s3', '~> 1.113'
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-gem "devise"
+# gem 'bootsnap', 
+gem 'bootsnap', require: false
+# gem "devise"
+# gem 'byebug', '~> 11.1', '>= 11.1.3'
+# gem 'ruby_dev', '~> 0.1.0'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
